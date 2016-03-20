@@ -1,0 +1,24 @@
+<!-- display artilces: -->
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+
+<!-- display comments: -->
+<h2>Comments</h2>
+<%= render @article.comments %>
+<!-- this is short hand syntax. It passes in a local variable and iteratres over it.  Read about it here http://guides.rubyonrails.org/layouts_and_rendering.html#using-render -->
+
+
+<!-- comment form: -->
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+
+<%= link_to 'Back', articles_path %> |
+<%= link_to 'Edit', edit_article_path(@article) %>
